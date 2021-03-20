@@ -50,3 +50,15 @@ function replaceGenre() {
     }
 }
 replaceGenre();
+
+const viewedFilms = document.querySelector('.promo__interactive-list');
+viewedFilms.innerHTML = "";
+movieDB.movies.sort()
+movieDB.movies.forEach(function(film, i){
+    viewedFilms.innerHTML += `<li class="promo__interactive-item">${i+1}. ${film}
+
+    <div class="delete"></div>
+</li>`;
+});
+
+
