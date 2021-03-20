@@ -35,8 +35,9 @@ const movieDB = {
 
 function removeAds() {
     const ads = document.querySelector('.promo__adv');
+    content = document.querySelector('.promo__content');
     ads.remove();
-
+    content.style.width = 'calc(100% - 300px)';
 }
 
 removeAds();
